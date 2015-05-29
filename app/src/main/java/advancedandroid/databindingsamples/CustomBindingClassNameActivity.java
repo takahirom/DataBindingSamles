@@ -4,17 +4,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import advancedandroid.databindingsamples.CustomBindingItem;
 
 public class CustomBindingClassNameActivity extends AppCompatActivity {
     class CustomViewHolder extends RecyclerView.ViewHolder {
-        final advancedandroid.databindingsamples.CustomBindingItem bindingItem;
+        final CustomBindingItem bindingItem;
 
-        public CustomViewHolder(advancedandroid.databindingsamples.CustomBindingItem bindingItem, View itemView) {
+        public CustomViewHolder(CustomBindingItem bindingItem, View itemView) {
             super(itemView);
             this.bindingItem = bindingItem;
         }
@@ -33,7 +33,7 @@ public class CustomBindingClassNameActivity extends AppCompatActivity {
 
             @Override
             public CustomViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-                final advancedandroid.databindingsamples.CustomBindingItem bindingItem = advancedandroid.databindingsamples.CustomBindingItem.inflate(getLayoutInflater());
+                final CustomBindingItem bindingItem = CustomBindingItem.inflate(getLayoutInflater());
                 final View root = bindingItem.getRoot();
                 return new CustomViewHolder(bindingItem, root);
             }
