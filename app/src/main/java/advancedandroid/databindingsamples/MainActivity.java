@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.custom_binding_class_name_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CustomBindingClassNameActivity.class));
             }
         });
     }

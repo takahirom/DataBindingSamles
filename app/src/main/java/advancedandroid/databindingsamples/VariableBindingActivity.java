@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import advancedandroid.databindingsamples.data.User;
 import advancedandroid.databindingsamples.databinding.ActivityVariableBinding;
 
 public class VariableBindingActivity extends AppCompatActivity {
@@ -14,7 +15,7 @@ public class VariableBindingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ActivityVariableBinding viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_variable);
-        viewDataBinding.setI(10);
+        viewDataBinding.setUser(new User("John","Doe"));
     }
 
     @Override

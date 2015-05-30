@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".VariableBindingActivity"/>
-        <activity android:name=".CustomBindingClassNameActivity"/>
     </application>
 
 </manifest>
